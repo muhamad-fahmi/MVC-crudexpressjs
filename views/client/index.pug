@@ -1,0 +1,19 @@
+extends layout.pug
+block content
+    h3.mb-3 Data Mahasiswa
+    table.table
+        tr
+            th No 
+            th No Induk
+            th Nama
+            th Prodi
+            th Semester
+            th Alamat
+        for rows, index in data
+            tr
+                td #{index + 1}
+                td #{rows.noinduk}
+                td #{rows.nama}
+                td #{rows.prodi}
+                td #{rows.semester}
+                td #{rows.alamat}

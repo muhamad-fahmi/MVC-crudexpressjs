@@ -1,0 +1,30 @@
+extends layout.pug
+block content
+    h3.mb-3 Data Mahasiswa
+    a.btn.btn-primary.mb-3(href="/admin/tambah") Tambah Data
+    table.table
+        tr
+            th No 
+            th No Induk
+            th Nama
+            th Prodi
+            th Semester
+            th Alamat
+            th Opsi
+        for rows, index in data
+            tr
+                td #{index + 1}
+                td #{rows.noinduk}
+                td #{rows.nama}
+                td #{rows.prodi}
+                td #{rows.semester}
+                td #{rows.alamat}
+                td 
+                    div.row
+                        div.col-sm-6
+                            a.btn.btn-primary(href=`/admin/perbaharui/${rows.id}`) 
+                                i.fa &#xf044
+                        div.col-sm-6
+                            form(action=`/admin/dashboard/${rows.id}?_method=DELETE`, method="post")
+                                button(type="submit" class="btn btn-danger") 
+                                    i.fa &#xf014

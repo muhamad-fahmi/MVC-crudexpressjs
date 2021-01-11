@@ -1,0 +1,14 @@
+html
+    head
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+        title Login Admin
+    body
+        div.container.mt-5
+            h3.mb-4 Login Administrator
+            form(action="/admin", method="POST")
+                input(type="text", name="username", class="form-control mb-3", autocomplete="off", required, placeholder="masukan Username ...")
+                input(type="password", class="form-control  mb-3", name="password", autocomplete="off", required, placeholder="masukan Password...")
+                span.text-danger.mb-4 #{pesan}
+                br
+                br
+                button(type="submit" class="btn btn-primary") Login

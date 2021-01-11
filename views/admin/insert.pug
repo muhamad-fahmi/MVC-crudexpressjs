@@ -1,0 +1,10 @@
+extends layout.pug
+block content
+    h3.mb-4 Tambah Data Mahasiswa
+    form(action="/admin/dashboard", method="POST")
+        input(type="text", class="form-control mb-3", name="noinduk", placeholder="Masukan No Induk" )
+        input(type="text", class="form-control mb-3", name="nama", placeholder="Masukan Nama" )
+        input(type="text", class="form-control mb-3", name="prodi", placeholder="Masukan Prodi" )
+        input(type="text", class="form-control mb-3", name="semester", placeholder="Masukan Semester" )
+        input(type="text", class="form-control mb-4", name="alamat", placeholder="Masukan Alamat" )
+        button(type="submit", class="btn btn-success") Tambahkan
